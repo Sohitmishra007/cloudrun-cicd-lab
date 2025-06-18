@@ -1,9 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'asia-south1-docker.pkg.dev/testing-practice-org/my-repo/my-app:$SHORT_SHA', '.']
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/testing-practice-org/my-repo/my-app:$SHORT_SHA', '.']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'asia-south1-docker.pkg.dev/testing-practice-org/my-repo/my-app:$SHORT_SHA']
+  args: ['push', 'us-central1-docker.pkg.dev/testing-practice-org/my-repo/my-app:$SHORT_SHA']
 
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: gcloud
@@ -14,8 +14,8 @@ steps:
       'create',
       'release-$SHORT_SHA',
       '--delivery-pipeline=cloud-run-pipeline',
-      '--region=asia-south1',
-      '--images=my-app=asia-south1-docker.pkg.dev/testing-practice-org/my-repo/my-app:$SHORT_SHA'
+      '--region=us-central1',
+      '--images=my-app=us-central1-docker.pkg.dev/testing-practice-org/my-repo/my-app:$SHORT_SHA'
     ]
 options:
   logging: CLOUD_LOGGING_ONLY
