@@ -2,7 +2,7 @@ apiVersion: deploy.cloud.google.com/v1
 kind: DeliveryPipeline
 metadata:
   name: cloud-run-pipeline
-description: Cloud Deploy pipeline to Cloud Run
+description: Cloud Deploy pipeline for Cloud Run
 serialPipeline:
   stages:
     - targetId: run-target
@@ -12,6 +12,6 @@ apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
   name: run-target
-description: Cloud Run deployment target
+description: Deploy to Cloud Run in asia-south1
 run:
-  location: projects/testing-practice-org/locations/asia-south1
+  location: asia-south1
