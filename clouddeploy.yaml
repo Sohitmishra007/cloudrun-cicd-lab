@@ -16,4 +16,4 @@ metadata:
   name: run-target
 description: Cloud Run target for asia-south1
 run:
-  location: asia-south1
+  location: projects/testing-practice-org/locations/asia-south1
