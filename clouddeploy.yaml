@@ -14,6 +14,6 @@ apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
   name: run-target
-description: Cloud Run deployment target in asia-south1
+description: Cloud Run target for asia-south1
 run:
   location: asia-south1
