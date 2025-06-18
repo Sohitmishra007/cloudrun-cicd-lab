@@ -7,11 +7,13 @@ serialPipeline:
   stages:
     - targetId: run-target
       profiles: []
+
 ---
+
 apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
   name: run-target
-description: Deploy to Cloud Run in asia-south1
+description: Cloud Run deployment target in asia-south1
 run:
   location: asia-south1
