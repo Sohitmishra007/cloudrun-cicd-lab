@@ -14,4 +14,4 @@ metadata:
   name: run-target
 description: Cloud Run deployment target
 run:
-  location: asia-south1  # ✅ Make sure this is exactly like this
+  location: projects/testing-practice-org/locations/asia-south1
