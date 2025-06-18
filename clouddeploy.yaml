@@ -14,6 +14,6 @@ apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
   name: run-target
-description: Cloud Run target for asia-south1
+description: Cloud Run target for us-central1
 run:
-  location: projects/testing-practice-org/locations/asia-south1
+  location: projects/testing-practice-org/locations/us-central1 # <--- THIS MUST BE us-central1 NOW
