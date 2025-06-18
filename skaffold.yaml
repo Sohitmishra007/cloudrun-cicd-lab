@@ -1,0 +1,11 @@
+# skaffold.yaml
+apiVersion: skaffold/v4beta7  # Specifies the Skaffold API version.
+kind: Config                # Denotes this as a Skaffold configuration file.
+metadata:
+  name: cloud-run-app       # A logical name for your Skaffold configuration.
+
+deploy:
+  cloudrun: {}              # This block tells Skaffold to use the Cloud Run deployer.
+                            # When Cloud Deploy sees this, it understands that the target
+                            # environment is Cloud Run, and it will use the image
+                            # provided via '--images' flag in your gcloud deploy releases create command.
