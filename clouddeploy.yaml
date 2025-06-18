@@ -2,16 +2,16 @@ apiVersion: deploy.cloud.google.com/v1
 kind: DeliveryPipeline
 metadata:
   name: cloud-run-pipeline
-description: Cloud Run pipeline
+description: Cloud Deploy pipeline to Cloud Run
 serialPipeline:
   stages:
-  - targetId: run-target
-    profiles: []
+    - targetId: run-target
+      profiles: []
 ---
 apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
   name: run-target
-description: Deploy to Cloud Run
+description: Cloud Run deployment target
 run:
-  location: asia-south1
+  location: asia-south1  # ✅ Make sure this is exactly like this
