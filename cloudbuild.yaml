@@ -17,3 +17,5 @@ steps:
       '--region=asia-south1',
       '--images=my-app=asia-south1-docker.pkg.dev/testing-practice-org/my-repo/my-app:$SHORT_SHA'
     ]
+options:
+  logging: CLOUD_LOGGING_ONLY
